@@ -1,0 +1,58 @@
+<h1>Directives</h1>
+
+<section>
+  <h1>FOR LOOP</h1>
+  <div class="pill-group">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Blood Group</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+       @for (item of users; track item.id) {
+        <tr>
+          <th scope="row">{{item?.id}}</th>
+          <td> {{item.firstName +' '+ item.lastName}}</td>
+          <td>{{item?.email}}</td>
+          <td>{{item?.bloodGroup}}</td>
+          <td>{{'@'+item?.username}}</td>
+        </tr>
+       }
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <h1>If Else Statement</h1>
+  <div class="pill-group">
+    @if(userInfo.isLoggedIn) {
+    <div>Logged-in</div>
+    } @else if(userInfo.isAdmin) {
+    <div>Admin</div>
+    } @else {
+    <div>Please Login</div>
+    }
+  </div>
+</section>
+<section>
+  <h1>Switch Statement</h1>
+      <div class="pill-group">
+        @switch (color) {
+          @case ("red") {
+              <div [style.color]="color">Red</div>
+          }
+          @case ("blue") {
+              <div  [style.color]="color">Blue</div>
+          }
+          @default {
+            <div  [style.color]="color">Other</div>
+          }
+      }
+        </div>
+  </section>
