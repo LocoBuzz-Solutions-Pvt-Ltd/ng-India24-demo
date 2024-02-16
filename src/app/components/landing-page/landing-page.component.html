@@ -232,12 +232,10 @@
       <div class="right-side">
         <div class="pill-group">
           @for (item of [
+          { title: 'Directive', link: '/directive' },
             { title: 'Signals', link: '/signal' },
-            { title: 'Directive', link: '/directive' },
             { title: 'Defer', link: '/defer' },
-            { title: 'Schematics', link: '/schematics' },
-            { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-            { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
+            { title: 'Schematics', link: '/schematics' }
           ]; track item.title) {
             <a
               class="pill"
